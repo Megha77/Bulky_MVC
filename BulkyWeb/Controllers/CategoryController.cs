@@ -77,5 +77,32 @@ namespace BulkyWeb.Controllers
                 return View();
             }
         }
+
+        public ActionResult Delete(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+
+            Category? categoryFromDb = _db.Categories.Find(id);
+            if (categoryFromDb == null)
+            {
+                return NotFound();
+            }
+            return View(categoryFromDb);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeletePost(int? id)
+        {
+            Category? category = _db.Categories.Find(id); if (category == null)
+            {
+                return NotFound();
+            }
+            _db.Categories.Remove(category);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

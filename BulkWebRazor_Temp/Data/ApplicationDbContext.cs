@@ -1,7 +1,7 @@
 ﻿using BulkWebRazor_Temp.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace BulkWebRazor_Temp
+namespace BulkWebRazor_Temp.Data
 {
     public class ApplicationDbContext : DbContext
     {

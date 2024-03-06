@@ -1,6 +1,6 @@
 ﻿using Bulky.DataAccess.Data;
 using Bulky.Models;
-using BulkyWeb.Models;
+//using BulkyWeb.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
